@@ -1,0 +1,155 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  /* height: 100vh; */
+  overflow: hidden;
+  /* background: url(https://unsplash.com/photos/hE0nmTffKtM);
+   */
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(74, 91, 109, 0),
+      rgba(74, 91, 109, 1)
+    ),
+    url(./images/virender-singh-hE0nmTffKtM-unsplash.jpg);
+  background-size: 100vw 100vh;
+}
+
+header {
+  margin: 2rem 0;
+  height: 12vh;
+}
+
+nav {
+  justify-content: center;
+  padding: 0 6.6rem;
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+}
+.logo img {
+  height: 4.2rem;
+}
+
+.nav-list {
+  display: flex;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  /* gap: 4rem; */
+}
+
+.list-item {
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.button-group {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.button-group ion-icon {
+  font-size: 30px;
+  color: #fff;
+}
+
+.details p {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.details a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+nav > *:not(:first-child) {
+  border-bottom: 3px solid #fff;
+}
+
+.hero {
+  margin: 0 4rem;
+  padding: 100px 50px;
+
+  position: relative;
+}
+.heading {
+  color: #fff;
+  font-size: 4.2rem;
+  padding-right: 50%;
+}
+
+.button {
+  border: 2px solid #fff;
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  margin-top: 1.6rem;
+  font-size: 1.6rem;
+  background-color: transparent;
+}
+
+.card {
+  width: 150px;
+  position: absolute;
+  border-style: none;
+  padding: 1rem 2rem;
+  background-color: rgba(240, 248, 255, 0.1);
+}
+
+.card ion-icon {
+  font-size: 35px;
+  border: 1px solid;
+  border-radius: 40px;
+  background-color: #fff;
+}
+.card p {
+  font-size: 1.4rem;
+  margin-top: 5px;
+  color: #fff;
+}
+
+.card1 {
+  top: 100px;
+  right: 0;
+}
+.card2 {
+  bottom: 5rem;
+  right: 350px;
+}
+
+.card1::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: aqua;
+  display: inline-block;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
