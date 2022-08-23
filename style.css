@@ -14,10 +14,7 @@ html {
 }
 
 body {
-  /* height: 100vh; */
-  overflow: hidden;
-  /* background: url(https://unsplash.com/photos/hE0nmTffKtM);
-   */
+  
   background-image: linear-gradient(
       to bottom right,
       rgba(74, 91, 109, 0),
@@ -25,45 +22,35 @@ body {
     ),
     url(./images/virender-singh-hE0nmTffKtM-unsplash.jpg);
   background-size: 100vw 100vh;
+  background-repeat: no-repeat;
 }
 
 header {
-  margin: 2rem 0;
-  height: 12vh;
+  margin: 0 auto;
+  padding:0 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 9.6rem;
 }
 
-nav {
-  justify-content: center;
-  padding: 0 6.6rem;
-  display: grid;
-  grid-template-columns: 2fr 8fr;
+.list-items {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:4rem;
 }
 .logo img {
   height: 4.2rem;
 }
 
-.nav-list {
-  display: flex;
-}
-.list {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  /* gap: 4rem; */
-}
-
-.list-item {
-  padding: 8px 16px;
-  border-radius: 10px;
-  transition: 0.2s ease-in;
-}
-
-nav ul li a {
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 500;
+.list-item a{
+  font-size: 1.6rem;
   text-decoration: none;
+  color:#fff;
 }
+
 
 .button-group {
   justify-self: end;
@@ -92,64 +79,130 @@ nav > *:not(:first-child) {
   border-bottom: 3px solid #fff;
 }
 
-.hero {
-  margin: 0 4rem;
-  padding: 100px 50px;
+.hero-section {
+  margin: 0 auto;
+  padding: 7.6rem 0;
+}
+ 
+  
+.hero{
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
 
-  position: relative;
+.left-side{
+  display: flex;
+  flex-direction: column;
+  gap:4rem;
 }
 .heading {
   color: #fff;
-  font-size: 4.2rem;
-  padding-right: 50%;
+  font-size: 7.2rem;
+  /* padding-right: 50%; */
 }
 
 .button {
   border: 2px solid #fff;
   border-radius: 40px;
-  padding: 1rem 2rem;
-  margin-top: 1.6rem;
+  padding: 2rem 4rem;
+  margin-right:auto;
   font-size: 1.6rem;
+  font-weight: 700;
+  color:#fff;
   background-color: transparent;
 }
 
-.card {
-  width: 150px;
-  position: absolute;
-  border-style: none;
-  padding: 1rem 2rem;
-  background-color: rgba(240, 248, 255, 0.1);
+.cards{
+  display: grid;
+  gap:8rem;
 }
 
+.card{
+  width: 20rem;;
+  padding:2rem 4rem;
+  background-color: rgba(240, 248, 255, 0.1);
+  position: relative;
+
+}
 .card ion-icon {
-  font-size: 35px;
+  font-size: 2rem;
   border: 1px solid;
   border-radius: 40px;
   background-color: #fff;
+  padding:1rem 3rem;
 }
+
 .card p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-top: 5px;
   color: #fff;
+  font-weight: 600;
 }
 
-.card1 {
-  top: 100px;
-  right: 0;
-}
-.card2 {
-  bottom: 5rem;
-  right: 350px;
+.card::after{
+  content:'';
+  position:absolute;
+  height:5rem;
+  width:10rem;
 }
 
-.card1::after {
-  content: "";
+.card::before{
+  content:'';
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: aqua;
-  display: inline-block;
+  background-color: #fff;
   position: absolute;
-  top: 200px;
-  left: 200px;
+}
+
+.card1::after{
+  border-left:2px solid #fff;
+  bottom:-40%;
+  left:50%;
+}
+.card1::before{
+  bottom:-50%;
+  left:47%;
+}
+
+.card2::after{
+  border-top:2px solid #fff;
+  bottom:10%;
+  right:-35%;
+}
+.card2::before{
+  bottom:42%;
+  right:-38%;
+}
+
+
+ /**************************/
+/* VIEW BELOW 544px (Phones) */
+/* 16px * 34 = 544px  */
+/**************************/
+
+@media (max-width:34em){
+  body{
+    background-size: cover;
+    background-position: top;
+  }
+  .list-items{
+    /*Hide navigation */
+    display: none;
+  }
+
+  .hero{
+    display: flex;
+    flex-direction: column-reverse;;
+    align-items: center;
+    justify-content: center;
+    gap:6rem;
+  }
+  .left-side{
+    text-align: center;
+  }
+  button{
+    margin:0 auto;
+  }
 }
