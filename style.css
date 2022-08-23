@@ -21,8 +21,11 @@ body {
       rgba(74, 91, 109, 1)
     ),
     url(./images/virender-singh-hE0nmTffKtM-unsplash.jpg);
-  background-size: 100vw 100vh;
+  /* background-size: 100vw 100vh; */
   background-repeat: no-repeat;
+  background-size:cover;
+background-position:center;
+
 }
 
 header {
@@ -183,10 +186,7 @@ nav > *:not(:first-child) {
 /**************************/
 
 @media (max-width:34em){
-  body{
-    background-size: cover;
-    background-position: top;
-  }
+ 
   .list-items{
     /*Hide navigation */
     display: none;
